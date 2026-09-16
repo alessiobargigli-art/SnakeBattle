@@ -4,8 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
   <meta name="theme-color" content="#18331f" />
+  <meta name="application-name" content="SnakeBattle" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="SnakeBattle" />
   <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
   <link rel="stylesheet" href="/app.css" />
+  <link rel="stylesheet" href="/pwa.css" />
   <title>SnakeBattle</title>
 </head>
 <body>
@@ -68,6 +76,7 @@
 
     <section id="rotate" class="rotate hidden">Ruota il telefono in orizzontale ↻</section>
   </main>
+  <script src="/pwa-install.js"></script>
   <script type="module" src="/app.js"></script>
 </body>
 </html>
