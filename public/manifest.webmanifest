@@ -1,0 +1,10 @@
+{
+  "name": "SnakeBattle",
+  "short_name": "SnakeBattle",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#102416",
+  "theme_color": "#18331f",
+  "description": "Snake Battle realtime per desktop e smartphone."
+}

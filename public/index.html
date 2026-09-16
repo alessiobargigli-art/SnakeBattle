@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#18331f" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="/app.css" />
+  <title>SnakeBattle</title>
+</head>
+<body>
+  <main id="app">
+    <section id="menu" class="panel">
+      <div class="brand-mark" aria-hidden="true">🐍</div>
+      <h1>SnakeBattle</h1>
+      <p>Due serpenti, un campo, tanta frutta da mangiare.</p>
+
+      <label class="setting" for="speedSelect">
+        <span>Velocità</span>
+        <select id="speedSelect">
+          <option value="1">Tranquilla</option>
+          <option value="2" selected>Normale</option>
+          <option value="3">Veloce</option>
+        </select>
+      </label>
+
+      <div class="actions">
+        <button id="cpuBtn">1 VS CPU</button>
+        <button id="createBtn">CREA STANZA</button>
+      </div>
+
+      <div class="join">
+        <input id="roomInput" maxlength="6" placeholder="CODICE STANZA" autocomplete="off" autocapitalize="characters" />
+        <button id="joinBtn">ENTRA</button>
+      </div>
+
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="game" class="game hidden">
+      <div class="topbar">
+        <button id="backBtn" class="ghost">ESCI</button>
+        <div class="scoreboard">
+          <span id="leftScore" class="score green">0</span>
+          <span id="roomLabel">SNAKE BATTLE</span>
+          <span id="rightScore" class="score amber">0</span>
+        </div>
+        <div class="topbar-buttons">
+          <button id="copyLinkBtn" class="ghost hidden">COPIA LINK</button>
+          <button id="fullscreenBtn" class="ghost">FULLSCREEN</button>
+        </div>
+      </div>
+
+      <div class="board-wrap">
+        <canvas id="canvas" width="1600" height="900" aria-label="Campo di SnakeBattle"></canvas>
+        <div id="dpad" class="dpad" aria-label="Controlli direzione">
+          <button type="button" data-dir="up" aria-label="Su">▲</button>
+          <div>
+            <button type="button" data-dir="left" aria-label="Sinistra">◀</button>
+            <button type="button" data-dir="down" aria-label="Giù">▼</button>
+            <button type="button" data-dir="right" aria-label="Destra">▶</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="hint">Scorri sul campo oppure usa le frecce.</div>
+    </section>
+
+    <section id="rotate" class="rotate hidden">Ruota il telefono in orizzontale ↻</section>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
